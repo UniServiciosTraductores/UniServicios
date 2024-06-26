@@ -52,7 +52,7 @@ truffle migrate
 npm start
 ```
 ### Paso 4 (Opcional): Test Unitarios..
-Utilizamos el modulo "Mocha" cómo pruebas unitarias..
+Utilizamos el marco de prueba Mocha de JavaScript para programas de Node.js, que ofrece compatibilidad con navegadores, pruebas asincrónicas, informes de cobertura de pruebas
 ```bash
 npm test
 ```
