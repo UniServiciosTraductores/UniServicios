@@ -32,7 +32,6 @@ Y saldra algo como esto
 ![Screenshot_3](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/f65445b7-27b0-4454-8f57-64a5c29bbe68)
 
 ### Paso 3: Hacer deploy al proyecto
-Dentro de la carpeta clonada
 ![Screenshot_4](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/29cd2e5c-3cfc-4885-be54-5b6b79ccaef8)
 ## En el CMD o Terminal de Visual Studio Code
 ```bash
@@ -40,8 +39,8 @@ npm install
 truffle migrate
 npm start
 ```
-##Nota:
-Al hacer estos pasos correctamente, tendra que ir al navegador y al `localhost:3000`
+## Nota:
+Al hacer estos pasos correctamente, tendra que ir al navegador y al `localhost:3000` para darle interactividad al proyecto.
 
 
 
