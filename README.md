@@ -36,7 +36,7 @@ cd UniServicios
 ### Paso 2: Iniciar Ganache
 ![Screenshot_1](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/fdb9a37f-2025-4c57-b62b-ed9f384911c7)
 
-#### Le damos en Quick Start..  
+<p>Le damos en Quick Start..</p>
 ![Screenshot_2](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/7be8b766-1df1-43af-b60e-3f6777c25bd2)
 
 ![Screenshot_3](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/f65445b7-27b0-4454-8f57-64a5c29bbe68)
