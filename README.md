@@ -59,12 +59,12 @@ npm test
 ![Screenshot_6](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/4da7543f-e3cb-4501-a320-74032675313f)
 
 ## Nota:
-Al hacer estos pasos correctamente, tendra que ir al navegador y al localhost:3000 para darle interactividad al proyecto.
+Al hacer estos pasos correctamente, tendra que ir al navegador y al HTTP://localhost:3000 para darle interactividad al proyecto.
 
 #### ¿Por qué usar la Blockchain para la autenticación de usuarios?
 Se utiliza contratos inteligentes para almacenar y verificar las credenciales de los usuarios, asegurando que las operaciones sean descentralizadas y seguras. 
 Cada usuario tiene una única wallet en la blockchain de Ganache, y las operaciones de registro e inicio de sesión se gestionan a través de estos contratos inteligentes.<br><br>
-**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545..<br><br>
+**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545<br><br>
 **Contratos Inteligentes:** Cargas el contrato inteligente (Auth) utilizando su ABI y dirección desplegada en la red configurada..<br><br>
 **Hash de Autenticación:** Calcula un hash único combinando el nombre de usuario, dirección de usuario, contraseña y correo..<br><br>
 **Hash de Credenciales:** Calcula los hashes individuales para username, email y password usando web3.utils.sha3..<br><br>
