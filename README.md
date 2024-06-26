@@ -51,6 +51,13 @@ truffle compile
 truffle migrate
 npm start
 ```
+### Paso 4 (Opcional): Test Unitarios..
+Utilizamos el modulo "Mocha" cómo pruebas unitarias..
+```bash
+npm test
+```
+![Screenshot_6](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/4da7543f-e3cb-4501-a320-74032675313f)
+
 ## Nota:
 Al hacer estos pasos correctamente, tendra que ir al navegador y al `localhost:3000` para darle interactividad al proyecto.
 
