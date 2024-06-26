@@ -12,9 +12,8 @@ Este proyecto fue desarrollado por:
 </ul>
 
 
-Este proyecto es una guía para configurar un entorno de desarrollo blockchain utilizando Truffle y Ganache. 
-Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, así como algunos ejemplos básicos para comenzar a desarrollar contratos inteligentes en Ethereum,
-para así autenticar de manera privada y agil a los estudiantes
+Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Truffle y Ganache. 
+Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, así como algunos ejemplos básicos para comenzar a desarrollar contratos inteligentes en Ethereum, para así autenticar de manera privada y agil a los estudiantes
 
 ## Prerrequisitos
 
@@ -48,6 +47,7 @@ Y saldra algo como esto
 ## En el CMD o Terminal de Visual Studio Code
 ```bash
 npm install
+truffle compile
 truffle migrate
 npm start
 ```
