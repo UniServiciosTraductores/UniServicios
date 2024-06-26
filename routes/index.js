@@ -107,7 +107,7 @@ router.post('/login', async (req, res) => {
   try {
     let isValid = await authContract.methods.login(usernameHash, passwordHash, userAddress).call();
     if (isValid) {
-      const token = jwt.sign({ username, userAddress }, process.env.JWTSECRET, {
+      const token = jwt.sign({ username, userAddress }, 'production', {
         expiresIn: '1h'
       });
       res.cookie("jwt", token);
