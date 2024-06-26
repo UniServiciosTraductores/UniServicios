@@ -6,7 +6,7 @@ const { promisify } = require('util');
 exports.protectRoute = async (req, res, next) => {
     if (req.cookies.jwt) {
         try {
-            const tokenAuthorized = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWTSECRET);
+            const tokenAuthorized = await promisify(jwt.verify)(req.cookies.jwt, 'production');
             if (tokenAuthorized) {
                 req.user = tokenAuthorized;
                 return next();
@@ -23,7 +23,7 @@ exports.protectRoute = async (req, res, next) => {
 exports.protectRouteLogOut = async (req, res, next) => {
     if (req.cookies.jwt) {
         try {
-            const tokenAuthorized = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWTSECRET);
+            const tokenAuthorized = await promisify(jwt.verify)(req.cookies.jwt, 'production');
             if (tokenAuthorized) {
                 return res.redirect('/');
             }
@@ -39,9 +39,6 @@ exports.logout = async(req,res) => {
     res.redirect("/login");
 }
     
-
-
-
 
 SignData = async (username, defaultAccount) => {
     try {
