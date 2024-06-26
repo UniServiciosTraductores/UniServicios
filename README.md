@@ -1,15 +1,15 @@
-# Proyecto Blockchain con Truffle y Ganache como simulador de Billeteras para la Autenticación del Estudiante Digital
+# Proyecto Blockchain con Truffle y Ganache como simliador de Billeteras para la Autenticación del Estudiante Digital
 
 Este proyecto fue desarrollado por:
-<li>
-  <ul>Jhoselyn Farfán</ul>
-  <ul>José Luna</ul>
-  <ul>Keidys Machado</ul>
-  <ul>Williams Suarez</ul>
-  <ul>Ramsés Sotomayor</ul>
-  <ul>Javier Pereira</ul>
-  <ul>Raislyn Córdova</ul>
-</li>
+<ul>
+  <li>Jhoselyn Farfán</li>
+  <li>José Luna</li>
+  <li>Keidys Machado</li>
+  <li>Williams Suarez</li>
+  <li>Ramsés Sotomayor</li>
+  <li>Javier Pereira</li>
+  <li>Raislyn Córdova</li>
+</ul>
 
 
 Este proyecto es una guía para configurar un entorno de desarrollo blockchain utilizando Truffle y Ganache. 
