@@ -63,13 +63,13 @@ Al hacer estos pasos correctamente, tendra que ir al navegador y al localhost:30
 
 #### ¿Por qué usar la Blockchain para la autenticación de usuarios?
 Se utiliza contratos inteligentes para almacenar y verificar las credenciales de los usuarios, asegurando que las operaciones sean descentralizadas y seguras. 
-Cada usuario tiene una única wallet en la blockchain de Ganache, y las operaciones de registro e inicio de sesión se gestionan a través de estos contratos inteligentes.<br>
-**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545..<br>
-**Contratos Inteligentes:** Cargas el contrato inteligente (Auth) utilizando su ABI y dirección desplegada en la red configurada..<br>
-**Hash de Autenticación:** Calcula un hash único combinando el nombre de usuario, dirección de usuario, contraseña y correo..<br>
-**Hash de Credenciales:** Calcula los hashes individuales para username, email y password usando web3.utils.sha3..<br>
-**Verificación de Existencia:** Verifica si el nombre de usuario o correo ya existen en la blockchain mediante los métodos del contrato inteligente..<br>
-**Registro de Usuario:** Si no hay conflicto, registra al nuevo usuario en la blockchain llamando al método register del contrato inteligente y enviando la transacción desde la dirección qué nos proporciona Ganache
+Cada usuario tiene una única wallet en la blockchain de Ganache, y las operaciones de registro e inicio de sesión se gestionan a través de estos contratos inteligentes.<br><br>
+**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545..<br><br>
+**Contratos Inteligentes:** Cargas el contrato inteligente (Auth) utilizando su ABI y dirección desplegada en la red configurada..<br><br>
+**Hash de Autenticación:** Calcula un hash único combinando el nombre de usuario, dirección de usuario, contraseña y correo..<br><br>
+**Hash de Credenciales:** Calcula los hashes individuales para username, email y password usando web3.utils.sha3..<br><br>
+**Verificación de Existencia:** Verifica si el nombre de usuario o correo ya existen en la blockchain mediante los métodos del contrato inteligente..<br><br>
+**Registro de Usuario:** Si no hay conflicto, registra al nuevo usuario en la blockchain llamando al método register del contrato inteligente y enviando la transacción desde la dirección qué nos proporciona Ganache.<br>
 
 ## Demo del Proyecto:
 Por el deterioro y escasez de memoria y procesador de la computadora, va a 30 fps, sin embargo; En una computadora de mayor gama va perfectamente fluido.
