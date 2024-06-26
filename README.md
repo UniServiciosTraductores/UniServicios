@@ -44,7 +44,7 @@ cd UniServicios
 
 ### Paso 3: Hacer deploy al proyecto
 ![Screenshot_4](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/29cd2e5c-3cfc-4885-be54-5b6b79ccaef8)
-## En el CMD o Terminal de Visual Studio Code
+### En el CMD o Terminal de Visual Studio Code(comando por comando)
 ```bash
 npm install
 truffle compile
@@ -60,6 +60,16 @@ npm test
 
 ## Nota:
 Al hacer estos pasos correctamente, tendra que ir al navegador y al `localhost:3000` para darle interactividad al proyecto.
+
+#### ¿Por qué usar la Blockchain para la autenticación de usuarios?
+Se utiliza contratos inteligentes para almacenar y verificar las credenciales de los usuarios, asegurando que las operaciones sean descentralizadas y seguras. 
+Cada usuario tiene una única wallet en la blockchain de Ganache, y las operaciones de registro e inicio de sesión se gestionan a través de estos contratos inteligentes.
+**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545.
+**Contratos Inteligentes:** Cargas el contrato inteligente (Auth) utilizando su ABI y dirección desplegada en la red configurada.
+**Hash de Autenticación:** Calcula un hash único combinando el nombre de usuario, dirección de usuario, contraseña y correo.
+**Hash de Credenciales:** Calcula los hashes individuales para username, email y password usando web3.utils.sha3.
+**Verificación de Existencia:** Verifica si el nombre de usuario o correo ya existen en la blockchain mediante los métodos del contrato inteligente.
+**Registro de Usuario:** Si no hay conflicto, registra al nuevo usuario en la blockchain llamando al método register del contrato inteligente y enviando la transacción desde la dirección qué nos proporciona Ganache
 
 ## Demo del Proyecto:
 Por el deterioro y escasez de memoria y procesador de la computadora, va a 30 fps, sin embargo; En una computadora de mayor gama va perfectamente fluido.
