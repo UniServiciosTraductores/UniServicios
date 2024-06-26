@@ -1,4 +1,4 @@
-# Proyecto Blockchain con Truffle y Ganache como simulador de Billeteras con Dinero Ficticios
+# Proyecto Blockchain con Truffle y Ganache como simulador de Billeteras para la Autenticación del Estudiante Estudiantil
 
 Este proyecto es una guía para configurar un entorno de desarrollo blockchain utilizando Truffle y Ganache. 
 Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, así como algunos ejemplos básicos para comenzar a desarrollar contratos inteligentes en Ethereum,
