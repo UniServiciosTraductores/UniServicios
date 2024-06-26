@@ -72,7 +72,7 @@ Cada usuario tiene una única wallet en la blockchain de Ganache, y las operacio
 **Registro de Usuario:** Si no hay conflicto, registra al nuevo usuario en la blockchain llamando al método register del contrato inteligente y enviando la transacción desde la dirección qué nos proporciona Ganache.<br>
 
 ## Demo del Proyecto:
-Debido al deterioro y la escasez de memoria y procesador de la computadora actual, la aplicación funciona a 30 fps. Sin embargo, en una computadora de mayor gama, la aplicación se ejecuta de manera perfectamente fluida
+Debido al deterioro y la escasez de memoria y procesador de la computadora actual, la aplicación funciona a 30 fps incluyendo la grabación en pantalla. Sin embargo, en una computadora de mayor gama, la aplicación se ejecuta de manera perfectamente fluida
 
 [UniServicios - Demo.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/dabe8d67-4f6c-4c79-ad29-74f4dfadb79a)
 
