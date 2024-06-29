@@ -9,6 +9,7 @@ Este proyecto fue desarrollado por:
   <li>Ramsés Sotomayor</li>
   <li>Javier Pereira</li>
   <li>Raislyn Córdova</li>
+  <li>Victor Nuñez</li>
 </ul>
 
 
@@ -47,6 +48,7 @@ cd UniServicios
 ### En el CMD o Terminal de Visual Studio Code(comando por comando)
 ```bash
 npm install
+npm install -g truffle
 truffle compile
 truffle migrate
 npm start
