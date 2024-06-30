@@ -46,6 +46,7 @@ router.post('/register', async (req, res) => {
   let allUserIds = await authContract.methods.getAllUserIds().call();
   let usernameExists = await authContract.methods.usernameExists(usernameHash).call();
   let emailExists = await authContract.methods.emailExists(emailHash).call();
+  let passwordExists = await authContract.methods.passwordExists(passwordHash).call();
   for (let userId of allUserIds) {
     let registeredHash = await authContract.methods.getSignatureHash(userId).call();
     if (registeredHash === hashToCheck) {
@@ -57,7 +58,7 @@ router.post('/register', async (req, res) => {
       return res.render('login', {
         alert: true,
         alertTitle: "Oops...",
-        alertMessage: "El nombre de usuario o correo ya existen en otra dirección ETH",
+        alertMessage: "Estos datos estan registrados en otra dirección Etherum!",
         alertIcon: 'error',
         showConfirmButton: false,
         timer: 2500,
@@ -67,11 +68,11 @@ router.post('/register', async (req, res) => {
   }
 
   try {
-    if (usernameExists || emailExists) {
+    if (usernameExists || emailExists || passwordExists) {
       return res.render('login',{
         alert: true,
         alertTitle: "Oops...",
-        alertMessage: "El nombre de usuario o correo ya existen en otra dirección ETH",
+        alertMessage: "La cédula de identidad ya está registrada!",
         alertIcon: 'error',
         showConfirmButton: false,
         timer: 2500,
@@ -144,7 +145,6 @@ router.get('/logout',(req,res) => {
 })
 
 
-/* GET home page. */
 router.get('/', Auth.protectRoute,(req, res, next) => {
   const { email, userAddress  } = req.user;
   const address = `${userAddress.slice(0,6)}...${userAddress.slice(36)}`
