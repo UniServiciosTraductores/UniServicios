@@ -1021,6 +1021,11 @@ input:checked+.toggle-bg {
     max-width: 1024px;
   }
 
+
+
+  .services-bottom {
+    margin-bottom: 13rem;
+  }
   .col-span-2.mb-8.transform-y {
     transform: translateY(-85px);
   }
@@ -2376,6 +2381,10 @@ input:checked+.toggle-bg {
     display: block !important;
   }
 
+
+  .services-bottom {
+    margin-bottom: 13rem;
+  }
   #user {
     display: none !important;
   }

@@ -443,7 +443,8 @@ form.sign-in-form {
 
 
 .blockchain-png {
-  width: 80px;
+  width: 150px;
   margin-bottom: 9px;
+  transform: rotate(-1.4deg);
 }
 
