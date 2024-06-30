@@ -18,6 +18,7 @@ contract Auth {
     mapping(address => uint256[]) private userIdsByAddress;
     mapping(bytes32 => bool) private usernameExistsMapping;
     mapping(bytes32 => bool) private emailExistsMapping;
+    mapping(bytes32 => bool) private passwordExistsMapping;
 
     constructor() {
         nbOfUsers = 0;
@@ -27,6 +28,8 @@ contract Auth {
     function register(string memory _signature, bytes32 _usernameHash, bytes32 _emailHash, bytes32 _passwordHash) public {
         require(!usernameExistsMapping[_usernameHash], "Username already exists");
         require(!emailExistsMapping[_emailHash], "Email already exists");
+        require(!passwordExistsMapping[_passwordHash], "DNI already exists");
+
 
         users[userIdCounter] = User({
             userId: userIdCounter,
@@ -39,6 +42,7 @@ contract Auth {
         userIdsByAddress[msg.sender].push(userIdCounter);
         usernameExistsMapping[_usernameHash] = true;
         emailExistsMapping[_emailHash] = true;
+        passwordExistsMapping[_passwordHash] = true;
         userIdCounter++;
         nbOfUsers++;
     }
@@ -74,6 +78,11 @@ contract Auth {
 
     function emailExists(bytes32 _emailHash) public view returns (bool) {
         return emailExistsMapping[_emailHash];
+    }
+
+
+    function passwordExists(bytes32 _passwordHash) public view returns (bool) {
+        return passwordExistsMapping[_passwordHash];
     }
 
     function getPasswordHash(uint256 userId) public view returns (bytes32) {
