@@ -16,20 +16,20 @@
     <div class="forms-container">
       <div class="signin-signup">
         <form action="/login" method="POST" class="sign-in-form">
-          <img src="/images/blockchain-development-icon.svg" alt="" class="blockchain-png">
+          <img src="/images/unerg-logo.svg" alt="" class="blockchain-png">
           <h2 class="title">Iniciar sesión</h2>
           <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Nombre de usuario" name="username" autocomplete="off" required/>
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Correo electrónico" name="email" autocomplete="off" required/>
           </div>
           <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" name="password" required />
+            <i class="fas fa-id-card"></i>
+            <input type="text" placeholder="Cédula de Identidad" name="password" required pattern="^(V)-\d{7,8}$" title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)." autocomplete="off" maxlength="10"/>
           </div>
           <input type="submit" value="Enviar" class="btn solid" />
         </form>
         <form action="/register" method="POST" class="sign-up-form">
-          <img src="/images/blockchain-development-icon.svg" alt="" class="blockchain-png">
+          <img src="/images/unerg-logo.svg" alt="" class="blockchain-png">
           <h2 class="title">Registrate</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -37,11 +37,11 @@
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Correo electronico" name="email" required autocomplete="off"/>
+            <input type="email" placeholder="Correo electrónico" name="email" required autocomplete="off"/>
           </div>
           <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" name="password" required autocomplete="off"/>
+            <i class="fas fa-id-card"></i>
+            <input type="text" placeholder="Cédula de Identidad" name="password" type="password" placeholder="Contraseña" name="password" required pattern="^(V)-\d{7,8}$" title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)." autocomplete="off" maxlength="10"/>
           </div>
           <input type="submit" class="btn register" value="Enviar" />
         </form>
