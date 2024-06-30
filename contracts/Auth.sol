@@ -80,9 +80,9 @@ contract Auth {
         return users[userId].passwordHash;
     }
 
-    function login(bytes32 _usernameHash, bytes32 _passwordHash, address _userAddress) public view returns (bool) {
+    function login(bytes32 _emailHash, bytes32 _passwordHash, address _userAddress) public view returns (bool) {
         for (uint256 i = 1; i < userIdCounter; i++) {
-            if (users[i].usernameHash == _usernameHash && users[i].passwordHash == _passwordHash && users[i].userAddress == _userAddress) {
+            if (users[i].emailHash == _emailHash && users[i].passwordHash == _passwordHash && users[i].userAddress == _userAddress) {
                 return true;
             }
         }
