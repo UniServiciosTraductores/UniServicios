@@ -108,7 +108,7 @@ router.post('/login', async (req, res) => {
   try {
     let isValid = await authContract.methods.login(emailHash, passwordHash, userAddress).call();
     if (isValid) {
-      const token = jwt.sign({ email, userAddress }, process.env.JWTSECRET, {
+      const token = jwt.sign({ email, userAddress }, 'blockchain', {
         expiresIn: '1h'
       });
       res.cookie("jwt", token);
