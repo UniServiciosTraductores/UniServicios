@@ -99,15 +99,15 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
   const userAddress = req.body.userAddress || defaultAccount; 
-  let usernameHash = web3.utils.sha3(username);
+  let emailHash = web3.utils.sha3(email);
   let passwordHash = web3.utils.sha3(password);
 
   try {
-    let isValid = await authContract.methods.login(usernameHash, passwordHash, userAddress).call();
+    let isValid = await authContract.methods.login(emailHash, passwordHash, userAddress).call();
     if (isValid) {
-      const token = jwt.sign({ username, userAddress }, 'production', {
+      const token = jwt.sign({ email, userAddress }, process.env.JWTSECRET, {
         expiresIn: '1h'
       });
       res.cookie("jwt", token);
@@ -116,7 +116,7 @@ router.post('/login', async (req, res) => {
       return res.render('login',{
         alert: true,
         alertTitle: "Oops...",
-        alertMessage: "El nombre de usuario o correo electrónico son incorrectos..",
+        alertMessage: "La cedula de identidad o correo electrónico son incorrectos..",
         alertIcon: 'error',
         showConfirmButton: false,
         timer: 2500,
@@ -146,10 +146,10 @@ router.get('/logout',(req,res) => {
 
 /* GET home page. */
 router.get('/', Auth.protectRoute,(req, res, next) => {
-  const { username, userAddress  } = req.user;
+  const { email, userAddress  } = req.user;
   const address = `${userAddress.slice(0,6)}...${userAddress.slice(36)}`
   res.render('index', {
-    username: username,
+    username: email,
     wallet: address
     });
 });
