@@ -23,6 +23,7 @@ Antes de empezar, asegúrate de tener instalado lo siguiente:
 - [Node.js](https://nodejs.org/) (versión 10.0 o superior)
 - [Git](https://git-scm.com/)
 - [Ganache](https://github.com/trufflesuite/ganache-ui/releases/download/v2.7.1/Ganache-2.7.1-win-x64.appx)
+- [MetaMask](https://chromewebstore.google.com/detail/nkbihfbeogaeaoehlefnkodbefgpgknn)
 
 ## Instalación
 
@@ -48,35 +49,69 @@ cd UniServicios
 ### En el CMD o Terminal de Visual Studio Code(comando por comando)
 ```bash
 npm install
-npm install -g truffle
-truffle compile
-truffle migrate
 npm start
 ```
 ### Paso 4 (Opcional): Test Unitarios..
-Utilizamos el marco de prueba Mocha de JavaScript para programas de Node.js, que ofrece compatibilidad con navegadores, pruebas asincrónicas, informes de cobertura de pruebas
+Utilizamos el marco de prueba Jest de JavaScript para programas de Node.js, que ofrece compatibilidad con navegadores, pruebas asincrónicas, informes de cobertura de pruebas
 ```bash
 npm test
 ```
-![Screenshot_6](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/4da7543f-e3cb-4501-a320-74032675313f)
+![agale](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/1776c99f-2255-469c-ae7e-304744ee7c7d)
+
 
 ## Nota:
 Al hacer estos pasos correctamente, tendra que ir al navegador y al HTTP://localhost:3000 para darle interactividad al proyecto.
 
 #### ¿Por qué usar la Blockchain para la autenticación de usuarios?
-Se utiliza contratos inteligentes para almacenar y verificar las credenciales de los usuarios, asegurando que las operaciones sean descentralizadas y seguras. 
-Cada usuario tiene una única wallet en la blockchain de Ganache, y las operaciones de registro e inicio de sesión se gestionan a través de estos contratos inteligentes.<br><br>
-**Conexión con Ganache:** Se utiliza Web3 para conectarte al nodo local de Ganache en HTTP://127.0.0.1:7545<br><br>
-**Contratos Inteligentes:** Cargas el contrato inteligente (Auth) utilizando su ABI y dirección desplegada en la red configurada..<br><br>
-**Hash de Autenticación:** Calcula un hash único combinando el nombre de usuario, dirección de usuario, contraseña y correo..<br><br>
-**Hash de Credenciales:** Calcula los hashes individuales para username, email y password usando web3.utils.sha3..<br><br>
-**Verificación de Existencia:** Verifica si el nombre de usuario o correo ya existen en la blockchain mediante los métodos del contrato inteligente..<br><br>
-**Registro de Usuario:** Si no hay conflicto, registra al nuevo usuario en la blockchain llamando al método register del contrato inteligente y enviando la transacción desde la dirección qué nos proporciona Ganache.<br>
+# Uso de Ganache con MetaMask
+
+Este proyecto utiliza Ganache y MetaMask para el desarrollo y pruebas de contratos inteligentes en la blockchain de Ethereum. A continuación, se detallan las características y la configuración de estas herramientas.
+
+## Características
+
+### Ganache
+Ganache es una blockchain personal que proporciona un entorno seguro y controlado para desarrollar y probar contratos inteligentes. Sus características principales son:
+
+- **Blockchain Local**: Permite realizar pruebas sin interactuar con la red principal de Ethereum o redes de prueba públicas.
+- **Control Total**: Permite modificar el estado de la blockchain, ajustar parámetros de minería y simular condiciones específicas de la red.
+- **Interfaz Gráfica**: Facilita la visualización y gestión de bloques, transacciones, cuentas y contratos.
+- **Configuración de Cuentas**: Proporciona cuentas con fondos ficticios para pruebas.
+- **Registro de Eventos**: Ofrece un registro detallado de eventos, transacciones y llamadas a contratos.
+
+### MetaMask
+MetaMask es una billetera de criptomonedas y extensión de navegador que permite interactuar con la blockchain de Ethereum. Sus características incluyen:
+
+- **Fácil Configuración**: Se instala como una extensión en navegadores como Chrome, Firefox y Brave.
+- **Gestión de Cuentas**: Permite crear y gestionar múltiples cuentas de Ethereum.
+- **Conexión a Redes**: Conexión a la red principal de Ethereum, redes de prueba y redes locales como Ganache.
+- **Firma de Transacciones**: Permite firmar transacciones y llamadas a contratos inteligentes.
+- **Integración con DApps**: Facilita la interacción con aplicaciones descentralizadas.
+
+## Configuración de Ganache con MetaMask
+
+Sigue estos pasos para configurar MetaMask para trabajar con Ganache:
+
+### Paso 1: Iniciar Ganache
+
+1. Descarga e instala Ganache desde [Truffle Suite](https://www.trufflesuite.com/ganache).
+2. Abre Ganache y anota la URL RPC (por defecto, suele ser `http://127.0.0.1:7545`).
+
+### Paso 2: Configurar MetaMask
+
+1. Instala la extensión de MetaMask en tu navegador desde [MetaMask](https://chromewebstore.google.com/detail/nkbihfbeogaeaoehlefnkodbefgpgknn).
+2. Abre MetaMask y selecciona "Custom RPC" en el menú de redes.
+3. Ingresa la URL RPC de Ganache y proporciona un nombre para la red.
+4. Guarda la configuración.
+
+### Paso 3: Importar Cuentas de Ganache a MetaMask
+
+1. En Ganache, copia la clave privada de una de las cuentas disponibles.
+2. En MetaMask, selecciona "Import Account" y pega la clave privada.
+
 
 ## Demo del Proyecto:
 Debido al deterioro y la escasez de memoria y procesador de la computadora actual, la aplicación funciona a 30 fps incluyendo la grabación en pantalla. Sin embargo, en una computadora de mayor gama, la aplicación se ejecuta de manera perfectamente fluida
 
-[UniServicios - Demo.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/dabe8d67-4f6c-4c79-ad29-74f4dfadb79a)
 
 
 
