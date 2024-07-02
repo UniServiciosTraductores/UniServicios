@@ -34,9 +34,14 @@ Aquí encontrarás instrucciones para la instalación y uso de estas herramienta
 La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del proyecto. A continuación se detalla el proceso seguido:
 
 ### Roles
-- **Product Owner:** Encargado de definir y priorizar las funcionalidades del producto.
-- **Scrum Master:** Responsable de asegurar que el equipo sigue los principios de Scrum y elimina impedimentos.
-- **Development Team:** Grupo de desarrolladores que implementan las funcionalidades del producto.
+- **Product Owner** 
+  <li>
+    <ul>
+    Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.
+    </ul>
+  </li>
+- **Scrum Master** Javier Pereira: Responsable de asegurar que el equipo sigue los principios de Scrum y elimina impedimentos.
+- **Development Team** Grupo de desarrolladores: que implementan las funcionalidades del producto.
 
 ### Artefactos
 - **Product Backlog:** Lista priorizada de todas las funcionalidades deseadas en el producto.
