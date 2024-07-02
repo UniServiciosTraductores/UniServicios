@@ -1,17 +1,4 @@
 # Proyecto Blockchain con MetaMask y Ganache como simulador de Billeteras para la Autenticación del Estudiante Digital
-
-Este proyecto fue desarrollado por:
-<ul>
-  <li>Jhoselyn Farfán</li>
-  <li>José Luna</li>
-  <li>Keidys Machado</li>
-  <li>Williams Suarez</li>
-  <li>Ramsés Sotomayor</li>
-  <li>Javier Pereira</li>
-  <li>Raislyn Córdova</li>
-  <li>Victor Nuñez</li>
-</ul>
-
 ## Herramientas Utilizadas
 <div style="display:flex; justify-content:center; align-items:center">
   <p>
@@ -35,7 +22,7 @@ La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del
 
 ### Roles
 **Product Owner** 
-- Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.
+- Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.<br>
 **Scrum Master**:
 - Javier Pereira: Responsable de asegurar que el equipo sigue los principios de Scrum y elimina impedimentos.
 **Development Team**
