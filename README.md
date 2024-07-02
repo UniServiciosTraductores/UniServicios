@@ -115,13 +115,19 @@ Sigue estos pasos para configurar MetaMask para trabajar con Ganache:
 2. Abre MetaMask y selecciona "Custom RPC" en el menú de redes.
 3. Ingresa la URL RPC de Ganache y proporciona un nombre para la red.
 5. Guarda la configuración.
-[Metamask add red.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/371cac2f-eb03-4750-8a3a-56d490b3599b)
+
+#### Video explicativo:
+[Metamask add red.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/4bb6948b-6cef-4f21-afca-c08a02cf8332)
+
 
 
 ### Paso 3: Importar Cuentas de Ganache a MetaMask
 Ya cuando tengas la red Ganache activa, *SI* no te llegan a cargar las demas cuentas de Ganache, haz esto:
 1. En Ganache, copia la clave privada de una de las cuentas disponibles.
 3. En MetaMask, selecciona "Import Account" y pega la clave privada.
+
+#### Video explicativo:
+[Metamask fixed accounts.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/6bd5038d-c359-47ba-85ba-08364f30db41)
 
 
 
