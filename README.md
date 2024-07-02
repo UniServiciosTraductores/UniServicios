@@ -59,7 +59,6 @@ cd UniServicios
 ![Screenshot_3](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/f65445b7-27b0-4454-8f57-64a5c29bbe68)
 
 ### Paso 3: Hacer deploy al proyecto
-![Screenshot_4](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/29cd2e5c-3cfc-4885-be54-5b6b79ccaef8)
 ### En el CMD o Terminal de Visual Studio Code(comando por comando)
 ```bash
 npm install
