@@ -14,8 +14,8 @@ Este proyecto fue desarrollado por:
 
 ## Herramientas Utilizadas
 
-- **MetaMask** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="30" height="30">
-- **Ganache** <img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="30" height="30">
+- **MetaMask** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="50" height="50">
+- **Ganache** <img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="50" height="50">
 
 
 Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
