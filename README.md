@@ -21,7 +21,7 @@ Este proyecto fue desarrollado por:
     <b>Ganache: </b><img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="35" height="35">
   </p>
   <p>
-    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="35">
+    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="30">
   </p>
 </div>
 Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
