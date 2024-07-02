@@ -13,11 +13,17 @@ Este proyecto fue desarrollado por:
 </ul>
 
 ## Herramientas Utilizadas
-
-- **MetaMask** <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="50" height="50">
-- **Ganache** <img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="50" height="50">
-
-
+<div align="center">
+  <p>
+    <b>MetaMask: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="35" height="35">
+  </p>
+  <p>
+    <b>Ganache: </b><img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="35" height="35">
+  </p>
+  <p>
+    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="35">
+  </p>
+</div>
 Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
 Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, para así autenticar de manera privada y agil a los estudiantes
 
