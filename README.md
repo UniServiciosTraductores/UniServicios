@@ -1,4 +1,4 @@
-# Sistema de Autenticación Estudiantil Seguro mediante Blockchain con MetaMask para Acceso a Servicios Universitarios en la Universidad Nacional Experimental Rómulo Gallegos
+# Sistema de Autenticación Estudiantil Seguro mediante Blockchain con MetaMask y Ganache para Acceso a Servicios Universitarios en la Universidad Nacional Experimental Rómulo Gallegos
 ## Herramientas Utilizadas
 <div style="display:flex; justify-content:center; align-items:center">
   <p>
