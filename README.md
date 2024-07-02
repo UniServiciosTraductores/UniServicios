@@ -1,4 +1,4 @@
-# Proyecto Blockchain con MetaMask y Ganache como simulador de Billeteras para la Autenticación del Estudiante Digital
+# Sistema de Autenticación Estudiantil Seguro mediante Blockchain con MetaMask para Acceso a Servicios Universitarios en la Universidad Nacional Experimental Rómulo Gallegos
 ## Herramientas Utilizadas
 <div style="display:flex; justify-content:center; align-items:center">
   <p>
@@ -67,7 +67,13 @@ Grupo de desarrolladores: que implementan las funcionalidades del proyecto:
 - **Raislyn Córdova:** Pruebas unitarias.
 - **Victor Nuñez:** Implementación de la funcionalidad de inicio de sesión y registro de usuarios.
 
-## Prerrequisitos
+### Tarjetas
+Cada tarjeta en Trello representa una tarea o funcionalidad específica. Las tarjetas contienen descripciones detalladas, listas de verificación y asignaciones de miembros del equipo.
+
+#### Video demostrativo:
+[Trello.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/90d9eba4-23a7-4906-a652-25b681c2c2d2)
+
+## Prerrequisitos para la instalación del Sistema
 
 Antes de empezar, asegúrate de tener instalado lo siguiente:
 
