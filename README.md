@@ -35,8 +35,8 @@ La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del
 
 ### Roles
 - **Product Owner** 
-  <li>
-    <ul style="list-style:none">
+  <li style="list-style:none">
+    <ul>
     Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.
     </ul>
   </li>
