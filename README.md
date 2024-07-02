@@ -13,7 +13,7 @@ Este proyecto fue desarrollado por:
 </ul>
 
 ## Herramientas Utilizadas
-<div style="display:flex; justify-content:center;">
+<div style="display:flex; justify-content:center; align-items:center">
   <p>
     <b>MetaMask: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="35" height="35">
   </p>
