@@ -22,9 +22,11 @@ La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del
 
 ### Roles
 **Product Owner** 
-- Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.<br>
+- Keidys Camacho: Encargado/a de definir y priorizar las funcionalidades del producto.
+
 **Scrum Master**:
 - Javier Pereira: Responsable de asegurar que el equipo sigue los principios de Scrum y elimina impedimentos.
+  
 **Development Team**
 Grupo de desarrolladores: que implementan las funcionalidades del proyecto:
 - Jhoselyn Farfán
