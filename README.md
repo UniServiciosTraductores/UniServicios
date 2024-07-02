@@ -29,6 +29,7 @@ Este proyecto fue desarrollado por:
 </div>
 Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache utilizando la metodología Scrum. 
 Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, para así autenticar de manera privada y agil a los estudiantes
+
 ## Metodología Scrum
 La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del proyecto. A continuación se detalla el proceso seguido:
 
