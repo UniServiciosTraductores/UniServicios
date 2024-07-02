@@ -2,13 +2,13 @@
 ## Herramientas Utilizadas
 <div style="display:flex; justify-content:center; align-items:center">
   <p>
-    <b>MetaMask: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="35" height="35">
+    <b>MetaMask</b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png" alt="MetaMask" width="35" height="35">
   </p>
   <p>
-    <b>Ganache: </b><img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="35" height="35">
+    <b>Ganache</b><img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="35" height="35">
   </p>
   <p>
-    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="25">
+    <b>NodeJS</b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="25">
   </p>
   <p>
     <b></b>
@@ -172,8 +172,5 @@ Ya cuando tengas la red Ganache activa, *SI* no te llegan a cargar las demas cue
 #### Video explicativo:
 [Metamask fixed accounts.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/6bd5038d-c359-47ba-85ba-08364f30db41)
 
-
-
-## Demo del Proyecto:
-Debido al deterioro y la escasez de memoria y procesador de la computadora actual, la aplicación funciona a 30 fps incluyendo la grabación en pantalla. Sin embargo, en una computadora de mayor gama, la aplicación se ejecuta de manera perfectamente fluida
+## Demo del Proyecto:https://unerg-blockchain.onrender.com
 
