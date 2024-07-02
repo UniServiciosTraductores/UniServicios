@@ -15,35 +15,41 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="/login" method="POST" class="sign-in-form">
+        <form action="/login" method="POST" class="sign-in-form" id="loginForm">
           <img src="/images/unerg-logo.svg" alt="" class="blockchain-png">
           <h2 class="title">Iniciar sesión</h2>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Correo electrónico" name="email" autocomplete="off" required/>
+            <input type="email" placeholder="Correo electrónico" name="email" autocomplete="off" required />
           </div>
           <div class="input-field">
             <i class="fas fa-id-card"></i>
-            <input type="text" placeholder="Cédula de Identidad" name="password" required pattern="^(V)-\d{7,8}$" title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)." autocomplete="off" maxlength="10"/>
+            <input type="text" placeholder="Cédula de Identidad" name="password" required pattern="^(V)-\d{7,8}$"
+              title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)."
+              autocomplete="off" maxlength="10" />
           </div>
           <input type="submit" value="Enviar" class="btn solid" />
         </form>
-        <form action="/register" method="POST" class="sign-up-form">
+        <form action="/register" method="POST" class="sign-up-form" id="registerForm">
           <img src="/images/unerg-logo.svg" alt="" class="blockchain-png">
           <h2 class="title">Registrate</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Nombre de usuario" name="username" required autocomplete="off"/>
+            <input type="text" placeholder="Nombre de usuario" name="username" required autocomplete="off"
+              id="username" />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Correo electrónico" name="email" required autocomplete="off"/>
+            <input type="email" placeholder="Correo electrónico" name="email" required autocomplete="off" id="email" />
           </div>
           <div class="input-field">
             <i class="fas fa-id-card"></i>
-            <input type="text" placeholder="Cédula de Identidad" name="password" type="password" placeholder="Contraseña" name="password" required pattern="^(V)-\d{7,8}$" title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)." autocomplete="off" maxlength="10"/>
+            <input type="text" placeholder="Cédula de Identidad" name="password" type="password"
+              placeholder="Contraseña" name="password" required pattern="^(V)-\d{7,8}$"
+              title="La contraseña debe ser una cédula de identidad venezolana válida (e.g., V-12345678)."
+              autocomplete="off" maxlength="10" id="password" />
           </div>
-          <input type="submit" class="btn register" value="Enviar" />
+          <input type="submit" class="btn register" value="Enviar" id="btn-register" />
         </form>
       </div>
     </div>
@@ -69,22 +75,11 @@
       </div>
     </div>
   </div>
-
   <script src="/javascripts/app.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <% if(alert) { %>
-    <script>
-      Swal.fire({
-        title: '<%= alertTitle %>',
-        text: '<%= alertMessage %>',
-        icon: '<%= alertIcon %>',
-        showConfirmButton: <%= showConfirmButton %>,
-        timer: <%= timer %>
-      }).then(() => {
-          window.location = '/<%= ruta %>'
-        })
-    </script>
- <% } %>
+  <script src="/javascripts/metamask.js"></script>
+
+
 </body>
 
 </html>

@@ -1,137 +1,103 @@
 var express = require('express');
-var router = express.Router();
-const { Web3 } = require("web3");
+var router = express.Router()
 const Auth = require('../controllers/auth');
-const contract = require('../build/contracts/Auth.json');
 const jwt = require('jsonwebtoken');
-//const web3 = new Web3(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
-const web3 = new Web3("HTTP://127.0.0.1:7545");
-let authContract;
-let defaultAccount;
-require('dotenv').config()
+require('dotenv').config();
+const { initializeApp } = require('firebase/app');
+const { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } = require('firebase/auth');
+const { getFirestore, doc, setDoc, getDoc, query, where, getDocs, collection } = require('firebase/firestore');
+
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID ,
+};
 
 
-// Configurar conexión con la blockchain
-web3.eth.getAccounts()
-  .then(accounts => {
-    if (accounts.length === 0) {
-      throw new Error("No accounts found. Make sure Ganache is running.");
-    }
-    defaultAccount = accounts[0];
-    //A partado de Wallets, cómo cada usuario tendra UNA unica wallet, si va a registrar 2 cuentas o +
-    //tendra qué obtener estás wallets por medió de wallets reales con dinero,estos son ficticias...
-    const networkId = Object.keys(contract.networks)[0];
-    authContract = new web3.eth.Contract(
-      contract.abi,
-      contract.networks[networkId].address
-    );
-  })
-  .catch(error => {
-    console.error("Error fetching accounts or contract:", error);
-  });
+// Inicializar Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+// Obtener instancias de Auth y Firestore
+const auth = getAuth(firebaseApp);
+const db = getFirestore(firebaseApp);
 
 
 router.post('/register', async (req, res) => {
-  const { username, email, password } = req.body;
-  let userAddress = defaultAccount;
-  let hashToCheck = await Auth.AuthenticationHash(username, userAddress, password, email, web3);
-
-  // Obtén todos los IDs de usuarios registrados bajo la misma dirección
-  // Calcular los hashes de username, email y password
-  let usernameHash = web3.utils.sha3(username);
-  let emailHash = web3.utils.sha3(email);
-  let passwordHash = web3.utils.sha3(password)
-
-  // Obtén todos los IDs de usuarios registrados
-  let allUserIds = await authContract.methods.getAllUserIds().call();
-  let usernameExists = await authContract.methods.usernameExists(usernameHash).call();
-  let emailExists = await authContract.methods.emailExists(emailHash).call();
-  let passwordExists = await authContract.methods.passwordExists(passwordHash).call();
-  for (let userId of allUserIds) {
-    let registeredHash = await authContract.methods.getSignatureHash(userId).call();
-    if (registeredHash === hashToCheck) {
-      console.log('==========================================')
-      console.log('Dirección de usuario: ', userAddress);
-      console.log('Hash: ', hashToCheck);
-      console.log('Registro del Hash: ', registeredHash);
-      console.log('==========================================')
-      return res.render('login', {
-        alert: true,
-        alertTitle: "Oops...",
-        alertMessage: "Estos datos estan registrados en otra dirección Etherum!",
-        alertIcon: 'error',
-        showConfirmButton: false,
-        timer: 2500,
-        ruta: 'login',
-      })
-    }
-  }
+  const { username, email, password, metaMaskAddress } = req.body;
 
   try {
-    if (usernameExists || emailExists || passwordExists) {
-      return res.render('login',{
-        alert: true,
-        alertTitle: "Oops...",
-        alertMessage: "La cédula de identidad ya está registrada!",
-        alertIcon: 'error',
-        showConfirmButton: false,
-        timer: 2500,
-        ruta: 'login',
-      })
+    // Verificar si el username, email o password ya existen
+    const usernameQuery = query(collection(db, 'users'), where('username', '==', username));
+    const emailQuery = query(collection(db, 'users'), where('email', '==', email));
+    const passwordQuery = query(collection(db, 'users'), where('password', '==', password));
+
+    const usernameSnapshot = await getDocs(usernameQuery);
+    const emailSnapshot = await getDocs(emailQuery);
+    const passwordSnapshot = await getDocs(passwordQuery);
+
+    if (!usernameSnapshot.empty || !emailSnapshot.empty || !passwordSnapshot.empty) {
+      return res.status(400).json({ error: 'La cédula de identidad ya está registrada!' });
     }
 
-    // Registro del nuevo usuario
-    await authContract.methods.register(hashToCheck, usernameHash, emailHash, passwordHash).send({ from: userAddress, gas: 1000000 });
-    return res.render('login', {
-      alert: true,
-      alertTitle: "Bien hecho!",
-      alertMessage: `Usted se registro bajo la dirección: ${userAddress}`,
-      alertIcon: 'success',
-      showConfirmButton: false,
-      timer: 2500,
-      ruta: 'login',
-    })
-  } catch (error) {
-    console.error(error);
-    return res.status(500).send({
-      response: 'Ocurrió un error al registrar el usuario',
+
+    // Crear un nuevo usuario en Firebase Auth
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Guardar información adicional en Firestore
+    await setDoc(doc(db, 'users', user.uid), {
+      username: username,
+      email: email,
+      password: password,
+      metaMaskAddress: metaMaskAddress,
     });
+
+    res.json({ message: `Usted se registro bajo la dirección: ${metaMaskAddress}`, });
+  } catch (error) {
+    console.error('Error en el registro:', error);
+    if (!res.headersSent) {
+      if (error.code === 'auth/email-already-in-use') {
+        res.status(400).json({ error: 'La cédula de identidad ya está registrada!' });
+      } else {
+        res.status(400).json({ error: error.message });
+      }
+    }
   }
 });
-
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-  const userAddress = req.body.userAddress || defaultAccount; 
-  let emailHash = web3.utils.sha3(email);
-  let passwordHash = web3.utils.sha3(password);
+  const { email, password, metaMaskAddress } = req.body;
 
   try {
-    let isValid = await authContract.methods.login(emailHash, passwordHash, userAddress).call();
-    if (isValid) {
-      const token = jwt.sign({ email, userAddress }, 'blockchain', {
-        expiresIn: '1h'
-      });
-      res.cookie("jwt", token);
-      res.redirect('/');
-    } else {
-      return res.render('login',{
-        alert: true,
-        alertTitle: "Oops...",
-        alertMessage: "La cedula de identidad o correo electrónico son incorrectos..",
-        alertIcon: 'error',
-        showConfirmButton: false,
-        timer: 2500,
-        ruta: 'login',
-      })
+    // Obtener la información del usuario desde Firestore
+    const userSnapshot = await getDocs(query(collection(db, 'users'), where('email', '==', email), where('password', '==', password)));
+
+    if (userSnapshot.empty) {
+      return res.status(404).json({ error: 'Usuario no encontrado o credenciales incorrectas.' });
     }
-  } catch (error) {
-    console.error(error);
-    return res.status(500).send({
-      response: 'Ocurrió un error al intentar iniciar sesión',
+
+    const userDoc = userSnapshot.docs[0];
+    const userData = userDoc.data();
+
+    // Verificar que la dirección de MetaMask coincida
+    if (userData.metaMaskAddress !== metaMaskAddress) {
+      return res.status(401).json({ error: 'No autorizado. Dirección de MetaMask incorrecta.' });
+    }
+
+    // Generar token JWT
+    const token = jwt.sign({ email: userData.email, userAddress: userData.metaMaskAddress }, 'blockchain', {
+      expiresIn: '1h'
     });
+
+    // Enviar token JWT como cookie
+    res.cookie('jwt', token);
+    res.json({ message: 'Inició de sesión exitoso!' });
+  } catch (error) {
+    console.error('Error en el inicio de sesión:', error);
+    res.status(500).json({ error: 'Error del servidor. Por favor, inténtalo de nuevo más tarde.' });
   }
 });
-
 
 router.get('/login',Auth.protectRouteLogOut, (req, res) => {
   res.render('login', {
@@ -153,16 +119,5 @@ router.get('/', Auth.protectRoute,(req, res, next) => {
     wallet: address
     });
 });
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
