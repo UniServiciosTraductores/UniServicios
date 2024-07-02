@@ -1,4 +1,5 @@
-# Proyecto Blockchain con Truffle y Ganache como simliador de Billeteras para la Autenticación del Estudiante Digital
+# Proyecto Blockchain con MetaMask![image](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/2eac9141-3288-4bb2-be4b-1ad1ce8c907f)
+ y Ganache como simuliador de Billeteras para la Autenticación del Estudiante Digital
 
 Este proyecto fue desarrollado por:
 <ul>
@@ -13,8 +14,8 @@ Este proyecto fue desarrollado por:
 </ul>
 
 
-Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Truffle y Ganache. 
-Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, así como algunos ejemplos básicos para comenzar a desarrollar contratos inteligentes en Ethereum, para así autenticar de manera privada y agil a los estudiantes
+Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
+Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, para así autenticar de manera privada y agil a los estudiantes
 
 ## Prerrequisitos
 
@@ -111,8 +112,4 @@ Sigue estos pasos para configurar MetaMask para trabajar con Ganache:
 
 ## Demo del Proyecto:
 Debido al deterioro y la escasez de memoria y procesador de la computadora actual, la aplicación funciona a 30 fps incluyendo la grabación en pantalla. Sin embargo, en una computadora de mayor gama, la aplicación se ejecuta de manera perfectamente fluida
-
-
-
-
 
