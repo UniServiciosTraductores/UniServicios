@@ -21,7 +21,10 @@ Este proyecto fue desarrollado por:
     <b>Ganache: </b><img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="MetaMask" width="35" height="35">
   </p>
   <p>
-    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="30">
+    <b>NodeJS: </b><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355" alt="MetaMask" width="35" height="25">
+  </p>
+  <p>
+    <b></b>
   </p>
 </div>
 Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
@@ -112,12 +115,14 @@ Sigue estos pasos para configurar MetaMask para trabajar con Ganache:
 1. Instala la extensión de MetaMask en tu navegador desde [MetaMask](https://chromewebstore.google.com/detail/nkbihfbeogaeaoehlefnkodbefgpgknn).
 2. Abre MetaMask y selecciona "Custom RPC" en el menú de redes.
 3. Ingresa la URL RPC de Ganache y proporciona un nombre para la red.
-4. Guarda la configuración.
+[Metamask add red.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/9f25268f-40b1-4947-9c6f-a687f1d5681d)
 
+5. Guarda la configuración.
 ### Paso 3: Importar Cuentas de Ganache a MetaMask
-
+Ya cuando tengas la red Ganache activa, *SI* no te llegan a cargar las demas cuentas de Ganache, haz esto:
 1. En Ganache, copia la clave privada de una de las cuentas disponibles.
-2. En MetaMask, selecciona "Import Account" y pega la clave privada.
+3. En MetaMask, selecciona "Import Account" y pega la clave privada.
+[Metamask fixed accounts.webm](https://github.com/UniServiciosTraductores/UniServicios/assets/159819990/c3aa0e4f-4f97-4477-aeaa-59023f2491c8)
 
 
 ## Demo del Proyecto:
