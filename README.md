@@ -27,8 +27,44 @@ Este proyecto fue desarrollado por:
     <b></b>
   </p>
 </div>
-Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache. 
+Esto es una guía para configurar un entorno de desarrollo blockchain utilizando Metamask y Ganache utilizando la metodología Scrum. 
 Aquí encontrarás instrucciones para la instalación y uso de estas herramientas, para así autenticar de manera privada y agil a los estudiantes
+## Metodología Scrum
+La metodología Scrum fue utilizada para organizar y gestionar el desarrollo del proyecto. A continuación se detalla el proceso seguido:
+
+### Roles
+- **Product Owner:** Encargado de definir y priorizar las funcionalidades del producto.
+- **Scrum Master:** Responsable de asegurar que el equipo sigue los principios de Scrum y elimina impedimentos.
+- **Development Team:** Grupo de desarrolladores que implementan las funcionalidades del producto.
+
+### Artefactos
+- **Product Backlog:** Lista priorizada de todas las funcionalidades deseadas en el producto.
+- **Sprint Backlog:** Lista de tareas seleccionadas para ser implementadas durante un Sprint.
+- **Increment:** Producto funcional al final de cada Sprint.
+
+### Ceremonias
+- **Sprint Planning:** Reunión para planificar el trabajo a realizar en el próximo Sprint.
+- **Daily Standup:** Reuniones diarias cortas para sincronizar el trabajo y resolver impedimentos
+- **Sprint Review:** Reunión para mostrar el trabajo completado durante el Sprint y obtener feedback.
+- **Sprint Retrospective:** Reunión para reflexionar sobre el Sprint pasado y buscar mejoras.
+
+## Funcionalidades Implementadas
+- **Registro de Usuarios:** Permite a los usuarios registrarse en el sistema con su dirección MetaMask.
+- **Inicio de Sesión:** Permite a los usuarios iniciar sesión utilizando su correo electrónico y contraseña.
+- **Vistas de Servicios Universitarios:** Incluye vistas para la bienvenida, servicios ofrecidos y testimonios de estudiantes.
+- **Configuración de Firebase y Firestore:** Integración de Firebase y Firestore para manejar la autenticación y el almacenamiento de datos.
+- **Verificación con MetaMask:** Verificación de la dirección MetaMask del usuario durante el inicio de sesión.
+- **Pruebas Unitarias:** Garantiza la calidad y funcionamiento correcto de las funcionalidades implementadas.
+
+## Contribuciones del Equipo
+- **Jhoselyn Farfán:** Diseño de las vistas de servicios universitarios.
+- **José Luna:** Configuración de Firebase y ayuda en la configuración de Firestore.
+- **Keidys Machado:** Verificación con MetaMask.
+- **Williams Suarez:** Configuración de Firestore.
+- **Ramsés Sotomayor:** Documentación.
+- **Javier Pereira:** Diseño de la interfaz de usuario y ayuda en el diseño de vistas de servicios universitarios.
+- **Raislyn Córdova:** Pruebas unitarias.
+- **Victor Nuñez:** Implementación de la funcionalidad de inicio de sesión y registro de usuarios.
 
 ## Prerrequisitos
 
