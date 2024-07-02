@@ -119,9 +119,9 @@ npm test
 Al hacer estos pasos correctamente, tendra que ir al navegador y al HTTP://localhost:3000 para darle interactividad al proyecto.
 
 #### ¿Por qué usar la Blockchain para la autenticación de usuarios?
-# Uso de Ganache con MetaMask
+## Uso de Ganache con MetaMask
 
-Este proyecto utiliza Ganache y MetaMask para el desarrollo y pruebas de contratos inteligentes en la blockchain de Ethereum. A continuación, se detallan las características y la configuración de estas herramientas.
+Este proyecto utiliza Ganache y MetaMask para el desarrollo y pruebas de contratos inteligentes en la blockchain de Ethereum para futuras transacciones. A continuación, se detallan las características y la configuración de estas herramientas.
 
 ## Características
 
